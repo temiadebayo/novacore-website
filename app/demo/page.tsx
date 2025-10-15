@@ -14,7 +14,7 @@ export default function DemoPage() {
             Request a Demo
           </h1>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto mb-12">
-            See NovaCore in action. Get a personalized demonstration of our compliance platform tailored to your organization's needs.
+            See NovaCore in action. Get a personalized demonstration of our compliance platform tailored to your organization&apos;s needs.
           </p>
         </div>
       </section>
