@@ -7,6 +7,8 @@ const nextConfig = {
   images: {
     unoptimized: false,
   },
+  // Ensure proper routing
+  trailingSlash: false,
   // Add security headers
   async headers() {
     return [
@@ -25,6 +27,8 @@ const nextConfig = {
       },
     ]
   },
+  // Ensure proper static export compatibility
+  // output: 'standalone', // Commented out for Vercel compatibility
 }
 
 module.exports = nextConfig
