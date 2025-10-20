@@ -40,7 +40,7 @@ export default function Navbar() {
     { name: 'Features', href: '/#features', id: 'features' },
     { name: 'Ecosystem', href: '/#ecosystem', id: 'ecosystem' },
     { name: 'How It Works', href: '/#how-it-works', id: 'how-it-works' },
-    { name: 'Contact', href: '/#contact', id: 'contact' },
+    { name: 'Contact', href: '/contact', id: 'contact' },
   ]
 
   const handleNavigation = (href: string) => {
