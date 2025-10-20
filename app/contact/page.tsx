@@ -132,7 +132,7 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-xl font-medium text-gray-600 max-w-3xl mx-auto tracking-tight">
-              Ready to transform your compliance processes? We're here to help you get started with NovaCore.
+              Ready to transform your compliance processes? We&apos;re here to help you get started with NovaCore.
             </p>
           </motion.div>
         </div>
@@ -149,11 +149,11 @@ export default function ContactPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h2 className="text-3xl font-semibold text-gray-900 mb-8 tracking-tight">
-                Let's Start a Conversation
+                Let&apos;s Start a Conversation
               </h2>
               <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                Whether you're a regulator looking to modernize oversight or an operator seeking streamlined compliance, 
-                we're here to help you succeed. Reach out to us through any of the channels below.
+                Whether you&apos;re a regulator looking to modernize oversight or an operator seeking streamlined compliance, 
+                we&apos;re here to help you succeed. Reach out to us through any of the channels below.
               </p>
 
               <div className="space-y-8">
@@ -271,7 +271,7 @@ export default function ContactPage() {
                     >
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                       <p className="text-green-700 font-medium">
-                        Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+                        Thank you! Your message has been sent successfully. We&apos;ll get back to you within 24 hours.
                       </p>
                     </motion.div>
                   )}
