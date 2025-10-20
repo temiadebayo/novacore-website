@@ -41,14 +41,14 @@ export default function DesignExperience() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="font-display font-semibold tracking-tight text-gray-900 mb-6">
             Design & Experience
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+          <p className="text-xl font-medium text-gray-600 max-w-3xl mx-auto mb-4 tracking-tight">
             Consistency. Clarity. Control.
           </p>
-          <p className="text-lg text-gray-500 max-w-4xl mx-auto">
-            NovaCore&apos;s user interface is modern yet familiar — built to preserve your existing workflows while elevating them with seamless interactivity.
+          <p className="text-lg text-gray-500 max-w-4xl mx-auto leading-relaxed">
+            NovaCore&apos;s user interface is modern yet familiar, built to preserve your existing workflows while elevating them with seamless interactivity.
           </p>
         </motion.div>
 
@@ -68,10 +68,10 @@ export default function DesignExperience() {
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 tracking-tight">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed font-normal">
                       {feature.description}
                     </p>
                   </div>

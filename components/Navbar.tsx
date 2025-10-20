@@ -87,7 +87,11 @@ export default function Navbar() {
                 src="/logo.png"
                 alt="NovaCore Logo"
                 fill
-                className="object-contain"
+                className={`object-contain transition-all duration-500 ${
+                  scrolled 
+                    ? 'brightness-100' 
+                    : 'brightness-0 invert'
+                }`}
                 priority
               />
             </div>

@@ -56,7 +56,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight"
+              className="font-display font-semibold text-white mb-6 tracking-tight leading-tight"
             >
               Real-Time Compliance for Africa&apos;s Energy Future
             </motion.h1>
@@ -85,26 +85,6 @@ export default function Hero() {
               </button>
             </motion.div>
 
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="grid grid-cols-3 gap-6"
-            >
-              <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-white mb-1">100+</div>
-                <div className="text-sm text-primary-200">Operators</div>
-              </div>
-              <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-white mb-1">99.9%</div>
-                <div className="text-sm text-primary-200">Uptime</div>
-              </div>
-              <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-white mb-1">24/7</div>
-                <div className="text-sm text-primary-200">Support</div>
-              </div>
-            </motion.div>
           </div>
 
           {/* Right Content - Dashboard Preview */}

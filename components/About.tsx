@@ -17,12 +17,12 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="font-display font-semibold tracking-tight text-gray-900 mb-6">
             Beyond Dashboards. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-900">
               Toward Real-Time Compliance.
             </span>
-          </h2>
+</h2>
         </motion.div>
 
         <motion.div
@@ -36,7 +36,7 @@ export default function About() {
           </p>
 
           <p>
-            It transforms traditional oversight into a <span className="font-semibold text-brand-950">collaborative, data-driven experience</span>, giving every participant — from national regulators to field operators — access to the same, accurate, real-time information.
+            It transforms traditional oversight into a <span className="font-semibold text-brand-950">collaborative, data-driven experience</span>, giving every participant, from national regulators to field operators, access to the same, accurate, real-time information.
           </p>
 
           <motion.div

@@ -54,7 +54,7 @@ export default function Vision() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight"
+          className="font-display font-semibold tracking-tight text-white mb-8 leading-tight"
         >
           To redefine compliance oversight in Africa&apos;s energy and finance sectors
         </motion.h2>

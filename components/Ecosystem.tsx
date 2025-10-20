@@ -76,7 +76,7 @@ export default function Ecosystem() {
             Integrated, Modular, Intelligent
           </p>
           <p className="text-lg text-gray-500 mt-4 max-w-4xl mx-auto">
-            NovaCore brings every part of the energy value chain into one cohesive digital space — without disrupting existing systems.
+            NovaCore brings every part of the energy value chain into one cohesive digital space, without disrupting existing systems.
           </p>
         </motion.div>
 
@@ -136,7 +136,7 @@ export default function Ecosystem() {
           className="mt-12 p-6 bg-gradient-to-r from-primary-50 to-primary-100 rounded-2xl border border-primary-200 text-center"
         >
           <p className="text-gray-700 text-lg">
-            <span className="font-semibold">Each KPI is interactive</span> — connecting to detailed analytics, upload portals, and regulatory submission workflows.
+            <span className="font-semibold">Each KPI is interactive</span>, connecting to detailed analytics, upload portals, and regulatory submission workflows.
           </p>
         </motion.div>
       </div>

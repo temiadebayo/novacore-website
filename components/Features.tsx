@@ -30,7 +30,7 @@ const features = [
   {
     icon: ShieldCheck,
     title: 'Governance & Risk Management',
-    description: 'Transparency and accountability are built into every workflow — ensuring data credibility and strengthening Nigeria\'s position in global regulatory standards.',
+    description: 'Transparency and accountability are built into every workflow, ensuring data credibility and strengthening Nigeria\'s position in global regulatory standards.',
     color: 'bg-primary-500',
     bgColor: 'bg-brand-50'
   }
