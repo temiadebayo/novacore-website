@@ -156,7 +156,7 @@ export default function ContactPage() {
       <Navbar />
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-primary-50 to-white">
+      <section className="pt-32 pb-16 bg-gradient-to-b from-primary-500 via-primary-600 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -164,10 +164,10 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="font-display font-semibold tracking-tight text-gray-900 mb-6">
+            <h1 className="font-display font-semibold tracking-tight text-white mb-6">
               Get in Touch
             </h1>
-            <p className="text-xl font-medium text-gray-600 max-w-3xl mx-auto tracking-tight">
+            <p className="text-xl font-medium text-white/90 max-w-3xl mx-auto tracking-tight">
               Ready to transform your compliance processes? We&apos;re here to help you get started with NovaCore.
             </p>
           </motion.div>
