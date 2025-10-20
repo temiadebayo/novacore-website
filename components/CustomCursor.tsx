@@ -37,40 +37,45 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Cursor dot */}
-      <motion.div
-        className="fixed pointer-events-none z-[9999] mix-blend-difference"
-        animate={{
-          x: mousePosition.x - 5,
-          y: mousePosition.y - 5,
-          scale: isHovering ? 1.5 : 1,
-        }}
-        transition={{
-          type: 'spring',
-          stiffness: 500,
-          damping: 28,
-          mass: 0.5,
+      {/* Cursor dot - moves instantly */}
+      <div
+        className="fixed pointer-events-none z-[9999]"
+        style={{
+          left: `${mousePosition.x}px`,
+          top: `${mousePosition.y}px`,
+          transform: 'translate(-50%, -50%)',
         }}
       >
-        <div className="w-2.5 h-2.5 bg-primary-400 rounded-full shadow-[0_0_10px_#3db2f6,0_0_20px_#3db2f6]" />
-      </motion.div>
+        <div 
+          className={`rounded-full transition-all duration-200 ${
+            isHovering 
+              ? 'w-4 h-4 bg-brand-500 shadow-[0_0_15px_#8b5cf6,0_0_30px_#8b5cf6]' 
+              : 'w-2.5 h-2.5 bg-primary-500 shadow-[0_0_10px_#3db2f6,0_0_20px_#3db2f6]'
+          }`}
+        />
+      </div>
 
-      {/* Cursor circle */}
+      {/* Cursor circle - slight delay for effect */}
       <motion.div
         className="fixed pointer-events-none z-[9998]"
         animate={{
           x: mousePosition.x - 20,
           y: mousePosition.y - 20,
-          scale: isHovering ? 1.5 : 1,
         }}
         transition={{
           type: 'spring',
-          stiffness: 150,
-          damping: 15,
-          mass: 0.1,
+          stiffness: 300,
+          damping: 20,
+          mass: 0.2,
         }}
       >
-        <div className="w-10 h-10 border-2 border-primary-400/50 rounded-full" />
+        <div 
+          className={`w-10 h-10 rounded-full border-2 transition-all duration-200 ${
+            isHovering 
+              ? 'border-brand-400/70 scale-150' 
+              : 'border-primary-400/50'
+          }`}
+        />
       </motion.div>
     </>
   )
