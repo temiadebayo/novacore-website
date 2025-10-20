@@ -62,6 +62,18 @@
   }
 }
 
+/* Custom Techy Cursor */
+* {
+  cursor: none !important;
+}
+
+/* Show text cursor on inputs for better UX */
+input,
+textarea,
+select {
+  cursor: text !important;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

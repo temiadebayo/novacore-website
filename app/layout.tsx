@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
+import CustomCursor from '@/components/CustomCursor'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -27,7 +28,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`}>{children}</body>
+      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`}>
+        <CustomCursor />
+        {children}
+      </body>
     </html>
   )
 }
