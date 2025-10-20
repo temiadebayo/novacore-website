@@ -21,8 +21,8 @@ export default function Footer() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <div className="flex justify-center mb-6">
-            <div className="relative w-24 h-24">
+          <div className="flex flex-col items-center mb-6">
+            <div className="relative w-32 h-32 mb-4">
               <Image
                 src="/logo.png"
                 alt="NovaCore Logo"
@@ -30,6 +30,7 @@ export default function Footer() {
                 className="object-contain brightness-0 invert"
               />
             </div>
+            <p className="text-xl text-gray-300 font-medium tracking-wide">Insights, Amplified.</p>
           </div>
         </motion.div>
 
