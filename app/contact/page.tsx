@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 const contactInfo = [
   {
@@ -12,16 +12,10 @@ const contactInfo = [
     description: 'Send us an email and we\'ll respond within 24 hours'
   },
   {
-    icon: Phone,
-    title: 'Call Us',
-    details: ['+234 (0) 1 234 5678', '+234 (0) 1 234 5679'],
-    description: 'Mon-Fri from 8am to 6pm WAT'
-  },
-  {
     icon: MapPin,
     title: 'Visit Us',
-    details: ['123 Victoria Island', 'Lagos, Nigeria'],
-    description: 'Come see us at our Lagos office'
+    details: ['Abuja, Nigeria'],
+    description: 'Come see us at our Abuja office'
   },
   {
     icon: Clock,
