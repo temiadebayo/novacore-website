@@ -8,7 +8,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email Us',
-    details: ['hello@novacore.africa', 'support@novacore.africa'],
+    details: ['hello@novacoreafrica.com', 'support@novacoreafrica.com'],
     description: 'Send us an email and we\'ll respond within 24 hours'
   },
   {
