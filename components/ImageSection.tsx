@@ -114,7 +114,13 @@ export default function ImageSection() {
               })}
             </div>
 
-            <button className="px-8 py-4 bg-brand-950 text-white rounded-lg font-semibold hover:bg-brand-900 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+            <button 
+              onClick={() => {
+                const featuresSection = document.getElementById('features')
+                featuresSection?.scrollIntoView({ behavior: 'smooth' })
+              }}
+              className="px-8 py-4 bg-brand-950 text-white rounded-lg font-semibold hover:bg-brand-900 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            >
               Explore Features
             </button>
           </motion.div>

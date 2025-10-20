@@ -86,8 +86,14 @@ export default function Hero() {
                 Request a Demo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300">
-                Watch Video
+              <button 
+                onClick={() => {
+                  const aboutSection = document.getElementById('about')
+                  aboutSection?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300"
+              >
+                Get Started
               </button>
             </motion.div>
 
