@@ -9,7 +9,7 @@ export default function Hero() {
   const router = useRouter()
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-brand-950">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-brand-950 via-primary-900 to-brand-900">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
