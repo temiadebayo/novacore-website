@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Mail, MapPin, Send, CheckCircle, AlertCircle, ChevronDown } from 'lucide-react'
 
 const contactInfo = [
   {
@@ -16,12 +16,6 @@ const contactInfo = [
     title: 'Visit Us',
     details: ['Abuja, Nigeria'],
     description: 'Come see us at our Abuja office'
-  },
-  {
-    icon: Clock,
-    title: 'Business Hours',
-    details: ['Monday - Friday: 8:00 AM - 6:00 PM', 'Saturday: 9:00 AM - 2:00 PM'],
-    description: 'We\'re here to help during business hours'
   }
 ]
 
@@ -63,6 +57,49 @@ const formFields = [
   }
 ]
 
+const faqs = [
+  {
+    question: "How quickly can we get started with NovaCore?",
+    answer: "Most organizations can be up and running within 2-4 weeks, depending on your specific requirements and data complexity. Our onboarding process includes system setup, data migration, user training, and initial configuration. We work closely with your team to ensure a smooth transition and provide dedicated support throughout the implementation phase."
+  },
+  {
+    question: "What types of organizations does NovaCore serve?",
+    answer: "NovaCore is designed for regulators, energy operators, financial institutions, and stakeholders across Africa's energy and finance sectors. Whether you're a national regulatory body like NUPRC or NMDPRA, an upstream/downstream operator, or a compliance officer, our platform adapts to your specific needs and workflows."
+  },
+  {
+    question: "Is NovaCore compatible with our existing systems?",
+    answer: "Yes, NovaCore is designed to integrate seamlessly with most existing systems through RESTful APIs and standard data formats (Excel, CSV, PDF). We support integration with ERP systems, existing databases, and legacy compliance tools. Our technical team will work with you to ensure smooth data flow between NovaCore and your current infrastructure without disrupting operations."
+  },
+  {
+    question: "What kind of training and support do you provide?",
+    answer: "We provide comprehensive training sessions tailored to different user roles - administrators, operators, compliance officers, and executives. Training includes live sessions, video tutorials, and documentation. Post-launch, we offer 24/7 technical support, regular system updates, dedicated account management for enterprise clients, and ongoing training for new features and team members."
+  },
+  {
+    question: "How does NovaCore ensure data security and compliance?",
+    answer: "NovaCore employs enterprise-grade security measures including end-to-end encryption, role-based access control, audit trails, and secure cloud infrastructure. We comply with international data protection standards and African regulatory requirements. All data is stored in secure, geo-redundant servers with regular backups and disaster recovery protocols in place."
+  },
+  {
+    question: "Can NovaCore handle multiple regulatory frameworks?",
+    answer: "Absolutely. NovaCore is built to accommodate multiple regulatory frameworks simultaneously, including NUPRC, NMDPRA, and other African energy regulators. The platform allows you to configure different compliance requirements, reporting templates, and validation rules for each regulatory body you work with."
+  },
+  {
+    question: "What data formats does NovaCore accept?",
+    answer: "NovaCore accepts a wide range of data formats including Excel spreadsheets (.xlsx, .xls), CSV files, PDF documents, and direct API integrations. Our intelligent data mapping automatically detects fields and validates entries against regulatory standards, making the upload process seamless regardless of your current data format."
+  },
+  {
+    question: "How does pricing work for NovaCore?",
+    answer: "We offer flexible pricing models based on your organization's size, user count, and specific needs. This includes subscription-based plans for operators, enterprise packages for large organizations, and custom solutions for regulatory bodies. Contact us for a detailed quote tailored to your requirements. We also offer demo periods to help you evaluate the platform."
+  },
+  {
+    question: "What happens to our data if we decide to stop using NovaCore?",
+    answer: "You retain full ownership of your data at all times. If you decide to discontinue using NovaCore, we provide complete data export in standard formats of your choice. We also offer a transition period with support to ensure smooth migration to any alternative system you choose. No data lock-in, ever."
+  },
+  {
+    question: "Does NovaCore support offline functionality?",
+    answer: "While NovaCore is primarily a cloud-based platform for real-time collaboration, we offer offline data collection capabilities for field operations. Data collected offline can be synchronized automatically when connectivity is restored, ensuring continuous operations even in remote locations."
+  }
+]
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -74,6 +111,7 @@ export default function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -306,38 +344,48 @@ export default function ContactPage() {
             </p>
           </motion.div>
 
-          <div className="space-y-6">
-            {[
-              {
-                question: "How quickly can we get started with NovaCore?",
-                answer: "Most organizations can be up and running within 2-4 weeks, depending on your specific requirements and data complexity."
-              },
-              {
-                question: "Do you offer training for our team?",
-                answer: "Yes, we provide comprehensive training sessions for all users, including administrators, operators, and compliance officers."
-              },
-              {
-                question: "Is NovaCore compatible with our existing systems?",
-                answer: "NovaCore is designed to integrate seamlessly with most existing systems through APIs and standard data formats."
-              },
-              {
-                question: "What kind of support do you provide?",
-                answer: "We offer 24/7 technical support, regular system updates, and dedicated account management for enterprise clients."
-              }
-            ].map((faq, index) => (
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.7 + index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100"
+                transition={{ duration: 0.8, delay: 0.7 + index * 0.05 }}
+                className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-primary-300 transition-colors duration-300"
               >
-                <h3 className="text-lg font-semibold text-gray-900 mb-3 tracking-tight">
-                  {faq.question}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {faq.answer}
-                </p>
+                <button
+                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                  className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+                >
+                  <h3 className="text-lg font-semibold text-gray-900 tracking-tight pr-4">
+                    {faq.question}
+                  </h3>
+                  <motion.div
+                    animate={{ rotate: openFaqIndex === index ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="flex-shrink-0"
+                  >
+                    <ChevronDown className="w-5 h-5 text-primary-500" />
+                  </motion.div>
+                </button>
+                
+                <AnimatePresence>
+                  {openFaqIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-6 pb-5 pt-2">
+                        <p className="text-gray-600 leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             ))}
           </div>
