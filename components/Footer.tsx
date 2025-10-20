@@ -21,21 +21,16 @@ export default function Footer() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-4 mb-4">
-            <div className="relative w-16 h-16 bg-white rounded-xl p-2 shadow-lg">
+          <div className="flex justify-center mb-6">
+            <div className="relative w-24 h-24">
               <Image
                 src="/logo.png"
                 alt="NovaCore Logo"
                 fill
-                className="object-contain"
+                className="object-contain brightness-0 invert"
               />
             </div>
-            <h3 className="text-3xl md:text-4xl font-bold">NovaCore</h3>
           </div>
-          <p className="text-xl text-gray-400 mb-2">Insights, Amplified.</p>
-          <p className="text-gray-500">
-            Real-Time Compliance Technology for Africa&apos;s Energy Transformation.
-          </p>
         </motion.div>
 
         <motion.div
