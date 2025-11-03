@@ -2,10 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
-import { Upload, GitBranch, BarChart3, Send, Activity } from 'lucide-react'
+import { useRef, useState } from 'react'
+import { Upload, GitBranch, BarChart3, Send, Activity, FileSearch, Database, Bell, CheckCircle, Shield } from 'lucide-react'
 
-const steps = [
+const operatorSteps = [
   {
     number: '1',
     icon: Upload,
@@ -42,15 +42,61 @@ const steps = [
     number: '5',
     icon: Activity,
     title: 'Monitor Compliance in Real-Time',
-    description: 'Both operators and regulators access synced insights, transforming oversight into a collaborative process.',
+    description: 'Access synced insights and track your compliance status across all regulatory requirements.',
     color: 'bg-primary-500',
     textColor: 'text-primary-500'
+  }
+]
+
+const regulatorSteps = [
+  {
+    number: '1',
+    icon: Database,
+    title: 'Access Unified Dashboard',
+    description: 'View real-time data from all operators across upstream, midstream, and downstream sectors in one centralized portal.',
+    color: 'bg-brand-600',
+    textColor: 'text-brand-600'
+  },
+  {
+    number: '2',
+    icon: FileSearch,
+    title: 'Review Submissions',
+    description: 'Automatically receive, validate, and review operator submissions with intelligent data verification and anomaly detection.',
+    color: 'bg-primary-600',
+    textColor: 'text-primary-600'
+  },
+  {
+    number: '3',
+    icon: BarChart3,
+    title: 'Analyze Sector Performance',
+    description: 'Track industry-wide trends, compliance rates, and performance metrics through interactive dashboards and visualizations.',
+    color: 'bg-brand-700',
+    textColor: 'text-brand-700'
+  },
+  {
+    number: '4',
+    icon: Bell,
+    title: 'Set Alerts & Notifications',
+    description: 'Configure custom alerts for non-compliance, submission deadlines, and critical threshold breaches across all operators.',
+    color: 'bg-primary-700',
+    textColor: 'text-primary-700'
+  },
+  {
+    number: '5',
+    icon: Shield,
+    title: 'Generate Reports & Insights',
+    description: 'Create comprehensive regulatory reports, export data for policy-making, and share insights with stakeholders.',
+    color: 'bg-brand-800',
+    textColor: 'text-brand-800'
   }
 ]
 
 export default function HowItWorks() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [activeTab, setActiveTab] = useState<'operators' | 'regulators'>('operators')
+  
+  const steps = activeTab === 'operators' ? operatorSteps : regulatorSteps
 
   return (
     <section id="how-it-works" ref={ref} className="py-32 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
@@ -81,6 +127,35 @@ export default function HowItWorks() {
           <p className="text-xl text-gray-300 max-w-4xl mx-auto font-medium tracking-wide">
             From raw data to regulatory compliance in <span className="text-primary-400 font-bold">5 intelligent steps</span>
           </p>
+
+          {/* Tab Switcher */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="flex justify-center gap-4 mt-12"
+          >
+            <button
+              onClick={() => setActiveTab('operators')}
+              className={`px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 ${
+                activeTab === 'operators'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/30'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20 backdrop-blur-sm border border-white/20'
+              }`}
+            >
+              For Operators
+            </button>
+            <button
+              onClick={() => setActiveTab('regulators')}
+              className={`px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 ${
+                activeTab === 'regulators'
+                  ? 'bg-gradient-to-r from-brand-600 to-brand-700 text-white shadow-lg shadow-brand-600/30'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20 backdrop-blur-sm border border-white/20'
+              }`}
+            >
+              For Regulators
+            </button>
+          </motion.div>
         </motion.div>
 
         {/* Main Process Flow */}
