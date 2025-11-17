@@ -6,7 +6,6 @@ import WhyNovaCore from '@/components/WhyNovaCore'
 import Ecosystem from '@/components/Ecosystem'
 import Features from '@/components/Features'
 import DesignExperience from '@/components/DesignExperience'
-import HowItWorks from '@/components/HowItWorks'
 import Impact from '@/components/Impact'
 import Vision from '@/components/Vision'
 import Footer from '@/components/Footer'
@@ -22,7 +21,6 @@ export default function Home() {
       <Ecosystem />
       <Features />
       <DesignExperience />
-      <HowItWorks />
       <Impact />
       <Vision />
       <Footer />

@@ -17,12 +17,8 @@ const ecosystemSectors = [
         title: 'Upstream Module',
         subtitle: 'Exploration & Production',
         metrics: [
-          { label: 'Daily Production Output', icon: TrendingUp },
-          { label: 'Compliance Rate', icon: Activity },
           { label: 'CAPEX vs Budget', icon: Gauge },
-          { label: 'HSE & Environmental Compliance', icon: FileCheck },
-          { label: 'License & Permit Tracking', icon: FileCheck },
-          { label: 'Incident & Inspection Logs', icon: Activity }
+          { label: 'HSE & Environmental Compliance', icon: FileCheck }
         ]
       },
       {
@@ -30,23 +26,15 @@ const ecosystemSectors = [
         subtitle: 'Transport & Processing',
         metrics: [
           { label: 'Pipelines Monitored', icon: Activity },
-          { label: 'Throughput Volume', icon: TrendingUp },
-          { label: 'Integrity Compliance', icon: FileCheck },
-          { label: 'Terminal & Plant Metrics', icon: Gauge },
-          { label: 'Transfer & Shipping Logs', icon: FileCheck },
-          { label: 'Incident Reports', icon: Activity }
+          { label: 'Integrity Compliance', icon: FileCheck }
         ]
       },
       {
         title: 'Downstream Module',
         subtitle: 'Distribution & Retail',
         metrics: [
-          { label: 'Registered Outlets', icon: Building },
-          { label: 'License Compliance Rate', icon: FileCheck },
-          { label: 'Quality Testing Compliance', icon: Activity },
-          { label: 'Retail Pricing Compliance', icon: Gauge },
-          { label: 'Delivery & Inventory Logs', icon: FileCheck },
-          { label: 'Incident Reporting', icon: Activity }
+          { label: 'Incident Reporting', icon: Activity },
+          { label: 'License Compliance Rate', icon: FileCheck }
         ]
       }
     ]
@@ -62,12 +50,8 @@ const ecosystemSectors = [
         title: 'Regulators Module',
         subtitle: 'Regulatory Oversight & Compliance',
         metrics: [
-          { label: 'License Management', icon: FileCheck },
-          { label: 'Tariff Monitoring', icon: Gauge },
-          { label: 'Grid Performance Tracking', icon: Activity },
-          { label: 'Generation Capacity Reports', icon: TrendingUp },
-          { label: 'Consumer Protection Metrics', icon: Shield },
-          { label: 'Compliance Audits', icon: FileCheck }
+          { label: 'Compliance Audits', icon: FileCheck },
+          { label: 'Grid Performance Tracking', icon: Activity }
         ]
       },
       {
@@ -75,11 +59,7 @@ const ecosystemSectors = [
         subtitle: 'Power Generation & Distribution',
         metrics: [
           { label: 'Generation Output', icon: TrendingUp },
-          { label: 'Distribution Network', icon: Activity },
-          { label: 'Equipment Maintenance', icon: Gauge },
-          { label: 'Load Balancing', icon: Activity },
-          { label: 'Outage Management', icon: FileCheck },
-          { label: 'Renewable Integration', icon: Zap }
+          { label: 'Distribution Network', icon: Activity }
         ]
       }
     ]
@@ -96,11 +76,7 @@ const ecosystemSectors = [
         subtitle: 'Regulatory Reporting & Oversight',
         metrics: [
           { label: 'Revenue Reporting', icon: TrendingUp },
-          { label: 'Taxation Compliance', icon: FileCheck },
-          { label: 'Audit Tracking', icon: Activity },
-          { label: 'Payment Processing', icon: DollarSign },
-          { label: 'Financial Statements', icon: Gauge },
-          { label: 'Budget Monitoring', icon: TrendingUp }
+          { label: 'Budget Monitoring', icon: Gauge }
         ]
       }
     ]
