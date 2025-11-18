@@ -6,6 +6,13 @@ const nextConfig = {
   // Ensure proper image optimization
   images: {
     unoptimized: false,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+    ],
   },
   // Ensure proper routing
   trailingSlash: false,
